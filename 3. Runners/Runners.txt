@@ -1,0 +1,35 @@
+Getting Running with Runners:
+- What is Runner:
+    -- A virtual machine where jobs defined in a workflow are run
+    -- Runners can be hosted on:
+        --- Linux
+        --- Windows
+        --- MacOS
+        --- Self-hosted
+- What is a custom Runner:
+    -- A custom runner is a runner that we host ourselves.
+    -- It can be any OS, datacenter cloud or workstation.
+    -- In a custom runner we are responsible for security, patching, and updates.
+- Why use custom Runners?
+    -- A custom Runner is useful if our organization is ruuning it on Github Enterprice
+    which is a licensed version of Github. This is common to organization with strong
+    security and compliance requirements.
+    -- Wen we use Github Enterprise, we can deploy it to private network to prevent
+    unauthorize access to our source code.
+    -- Github Enterprise do not have access to Github managed runners -- it can perform
+    actions on Github intance but setting up runners will save a lot of pain.
+    -- But there are use cases where we can run custom Runners without Github Enterprise.
+    Github does support manageability with secrets. We can use secrets to store
+    credentials and other sensitive information.
+    -- But there are scenarios where we don't want Github to access our production
+    environments and we want to run our own runners.
+    -- In order to cater monitoring requirements with extra visibility of our runners
+    we can use custom runners.
+    -- Another reason why we want to utilize our custom runner is cost management.
+    -- Cloud providers have sustained use and reserved discount rates. Enterprises
+    sometimes get bulk discounts. Depending on costs in our region, it may be cost
+    effective.
+    -- Custom runners as a service are assigned at the job level, so we could set up a
+    workflow to create a custom runner, complete the bulk of the job on the custom runner
+    and tear down the custom runner.
+

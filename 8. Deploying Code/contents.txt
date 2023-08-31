@@ -1,0 +1,3 @@
+Deploying our Code:
+    - Setup Lambda function
+    - Steps breakdown

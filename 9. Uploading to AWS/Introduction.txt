@@ -1,0 +1,50 @@
+Uploading to AWS:
+- Configuring AWS Access
+- Using Github Secrets
+- Step Breakdown
+
+## Configuring AWS Access
+There are two approaches to make it work with AWS:
+    -- DYI approach like below for new section in Github Actions:
+...
+    - name: Configuring AWS Manually
+    run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    - name: Unzip AWS CLI
+    run: unzip awscliv2.zip
+    - name: Install AWS CLI
+    run: sudo ./aws/install
+    - name: Configure AWS CLI
+    run: |
+        export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+        export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        export AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }}
+...
+    -- Second option is to use community actions where as a single step we provide credentials
+    to community action. Rest will be handled by the community action itself.
+...
+- name: Confugure AWS CLI
+  uses: aws-actions/configure-aws-credentials@v1
+  with:
+    aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+...
+## upload the artifact
+upload:
+  - runs-on: ubuntu-latest
+    needs: build
+    steps:
+         - name: Upload to AWS S3
+            uses: actions/upload-artifact@v2
+            with:
+                name: zipped-bundle
+         - name: AWS credentials
+           uses: aws-actions/configure-aws-credentials@v1
+           with:
+             aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+             aws-region: us-east-1
+         - name upload to s3
+           run: aws s3 cp ${{ github.sha }}.zip s3://mys3bucketforgithubactions/${{ github.sha }}.zip
+...
+With this we've created a build and then we were able to upload it to AWS S3 bucket.

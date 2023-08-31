@@ -1,0 +1,29 @@
+Building Workflows:
+- Triggering Workflows
+    -- The most common triggers in workflows are pushes and pull requests.
+    -- We can even schedule the triggers with valid cron expressions
+    -- Other triggers include comments and issues being opened etc
+- Creating the workflow file
+    -- Good first step: The first thing most code to build it. Specifics will vary depending
+    on language and framework.
+- Building and other compiling options inside workflows
+    -- In case of Python or in other scripting languages they don't need to be build in
+    Lambda. Lambda can run from just .py files, but bundling libraries can reduce latency,
+    streaming auditing, and support Lambda in private VPCs.
+- Environment Variables
+    -- We can set environment variables in the workflow file. We can also set them in the
+    Lambda console.
+    -- Following are the most common environment variables for workflows:
+        --- Repository information, name/url etc.
+        --- Event information such as initializing users, initiating process etc.
+        --- Commit information, such as commit SHA, Git branch, Head etc.
+        --- Job Information, Run Number, Job ID, Action ID etc.
+        --- Server information such as github server, API URL, GraphQL URL etc.
+        --- Runner Information such as runner OS, temp directory or tool cache directory etc.
+- Steps Breakdown for workflows
+    So natural step to create a workflow are as follows:
+    1. Checkout the code to runner.
+    2. Configure Python runner.
+    3. Install the required libraries.
+    4. Create a zipped bundle
+    5. Upload/store the artifact for later use.

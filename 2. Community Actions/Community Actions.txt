@@ -1,0 +1,16 @@
+What are community Actions?
+- Community Actions are prepackaged Actions or reusable templates for different use cases.
+- These actions are created by Github, partners, vendors to support their platforms, and
+the community ofcourse.
+- Community actions are free to use and we can fork them and customize them for use as they
+are open source.
+
+Finding the right action:
+    - In Github Marketplace we can filter by publisher, category, and keywords.
+    - We also can search for ations on Goolge.
+Examples:
+    - Checkout Actions
+    - Package Actions
+    - Deploy Actions
+    - Build Actions
+

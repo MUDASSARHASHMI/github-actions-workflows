@@ -1,0 +1,25 @@
+Github Actions:
+- A countinuous integration solution
+    -- Can trigger workflows based on pushes, pull requests, and other events to execute,
+    build, test and deploy tasks.
+- A managed Service
+    -- Hosted on GitHub
+    -- Github manages the underlying resources, so there is no configuring, patching and
+    updating of infrastructure (unless we want to)
+    -- Free for public repositories
+    -- Paid for private repositories
+- Supported by Community Libraries:
+    -- Community actions let 3rd parties and individual contributors publish reusable
+    solutions to common use cases.
+- Anatomy of Actions:
+    -- Workflow:
+        --- A workflow is collection of jobs that run based on a specific trigger.
+        Conceptually, a workflow is a CI pipeline. Workflows are defined in YAML files.
+    -- Runner:
+        --- A runner is a compute machine where workflows are executed. These can be
+        Github-managed runners or custom runners.
+    -- Job:
+        --- A job is a set of steps that executes in a single runner workspace.
+    -- Step:
+        --- A step is the lowest unit of functionality for Github Actions. It can be a
+        command, a script, a Javascript file, a Docker file, or a community action.

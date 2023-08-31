@@ -1,0 +1,64 @@
+Designing Workflows and Pipelines:
+- Best Practices:
+    -- Best practices are aggregated median solutions, typically favoring high-performance
+    organizations.
+    -- No one size fits all: Context is critical. What constraints does an organization have.
+    What strengths we can leverage.
+    -- Be ready to iterate: A CI soution is another application supporting the org. Be
+    prepared to iterate like any other software project.
+- The CI Pyramid
+    -- Best practices aggregate wisdom of the median.
+    -- We also need to filter that in context of our organization's strength, weaknesses,
+    and constraints of the organization.
+    -- Then we have to iterate from the lesson we've learned.
+    -- That is how we achieve the best CI solution for the organization we work with.
+- Focus on Value
+    -- CI should add value to organization. We need to avoid what other organizations are
+    doing instead we need to be focused to achieve value according to our organization's
+    use cases.
+    -- Faster iterations is how CI should help identify problems, as well as proof of concept
+    faster so fewer resources are invested in dead ends.
+    -- We should focus on making fewer mistakes by automating build and test processes should
+    reduce human error, which can cause incorrect builds and incompetent testing.
+    -- CI can reduce toil as few engineers enjoy manual build and test processes. Automation
+    frees them to focus on higher value tasks.
+    -- Finally if we are designing a pipeline that doesn't add value to our customers then
+    it is not helping us.
+- Managing Pipelines at scale:
+    -- There could be larger organizations with thousands of repositories and code base.
+    -- The role of shared service teams in larger organizations, sometimes a Shared Service
+    or DevOPS team is resposible for CI pipelines. When there are too many applications and
+    not enough CI engineers.
+    -- In order to manage large organization's based workflows we can create fewer standard
+    pipeline templates to cover major use cases if not all. The pieplines may not be optimized
+    for each app.
+    -- App teams should have ability to design custom pipelines so each pipeline is optimized
+    for respective application, and is maintained and updated by the team that works on it.
+- Structuring Pipelines
+    -- Structuring pipelins depends on Job size as pipline is composition of multiple
+    jobs. These jobs can be large or small, and steps can be grouped into as few or many
+    jobs as needed.
+    -- It depends on the use case where we can bind multiple jobs together or if they
+    are large to process then must be created in isolation.
+    -- There are pros and cons for both large or small jobs. In small jobs we have the
+    flexibility and easy to run in parellel, reorder as needed.
+    -- Also small jobs are easy to customize for a specific funtion or tool etc.
+    -- With small jobs we can quickly resume failed workflow by fixing and without restarting
+    the pipeline.
+    -- For large jobs we don't have to manage artifacts very often or dwonload or upload the
+    artifact multiple times.
+    -- Large jobs are less variant if common tools are installed once.
+    -- Large jobs are simple to manage with bash or shell script into a pipeline.
+- Branching strategy
+    -- What branches we may need:
+        --- It completely depends on the use cases or according to the need of team about
+        how to hanle branching in a team.
+        --- There might a dev, test, master branch be sufficient or it could be multiple
+        feature branches as important as main few branches.
+    -- How often we plan to deploy per day:
+        --- Lets say if we are deploying 10 times a day do we need a release branch for
+        each deploy? So it depends on necessity.
+        --- If we release on each sprint, a branch for each release would perform differently.
+    -- Protecting Key Branches:
+        --- Branches which map to code that's deployed should be protected so only approved
+        code changes are deployed.

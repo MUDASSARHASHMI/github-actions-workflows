@@ -1,0 +1,24 @@
+#Checkout the code to Runner
+#Configure Python on Runner
+# Install the required Libraries using Flake8
+# Run Lint checks for style issues
+# Execute the job before its builds
+# This is only the linting block as part of the complete workflow
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+      - name: Install Flake8 using pip
+        run: |
+          cd functions 
+          pip install flake8
+      - name: Lint with Flake8
+        run: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics

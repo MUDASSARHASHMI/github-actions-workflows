@@ -1,0 +1,19 @@
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+jobs:
+  build and push image:
+    ...
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Log in to the Container Registry
+      uses: docker/login-action
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action
+      with:
+        context: .
+        push: true

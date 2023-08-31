@@ -1,0 +1,36 @@
+Security of GHA:
+- Introduction:
+The most important aspect of security is to understand the threat model for Github Actions.
+Since there are many stakeholders crafting different types of Runners and Workflows.
+Generally the vendors offering solution to support their platforms are trusted ones. But
+since Github community is open to all, there is a possibility of malicious actors trying
+to exploit the systems and workflows.
+- Untrusted Inputs:
+Since Github Actions does not qualify traditional security model so we need to understand
+that traditional hardening systems like SELinux, AppArmor, etc. are not applicable here.
+
+We can design workflows to trigger or evaluate pull requests, comments, issues and other
+public contributions. However sources can be used to inject malicious code that can
+compromise secrets, disrupt workflows, and otherwise harm the project.
+- Community actions and best practices for security:
+Community actions are open source so we must treat them like other open source library
+or frameworks.
+Github allow us on organizational level to restrict certain actions for using communiy
+based libraries or frameworks even complete resriction.
+Github actions can be forked like any other repository. Maintain a fork in our
+in our organization and pull upstream changes as we approve them.
+
+- Security Practices for Custom Runners:
+Using custom runners with public repo can be dangerous, because it allows anyone to
+force their code in our infrastructure. The advantage of custom runners from public
+repository is that we can save a lot of cost. But it comes with potential threats to
+organization's digital security.
+We need to restrict access to runners with permissions or even if machine has to access
+some internal resources.
+Also we need to use separate runners for each repo so in case if one of the repo is
+compromised we can isolate the damage.
+- General Security Practices:
+   -- We need to make repository public if really required.
+   -- Are the key branches protected?
+   -- Do we have multiple approvers for pull requests?
+   -- Is the principle of least privilege followed?
