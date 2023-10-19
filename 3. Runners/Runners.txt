@@ -30,6 +30,6 @@ Getting Running with Runners:
     sometimes get bulk discounts. Depending on costs in our region, it may be cost
     effective.
     -- Custom runners as a service are assigned at the job level, so we could set up a
-    workflow to create a custom runner, complete the bulk of the job on the custom runner
-    and tear down the custom runner.
+    workflow to create a custom runner, complete the bulk of the job on the custom 
+    runner and tear down the custom runner.
 

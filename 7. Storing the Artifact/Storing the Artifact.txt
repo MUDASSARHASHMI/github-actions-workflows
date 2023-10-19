@@ -1,17 +1,19 @@
 Storing the Artifact:
-After we've built our package we need to store the artifacts somehwere so that we can use them
-later on. We can use the Github Packages to store our artifacts.
+After we've built our package we need to store the artifacts somehwere so that we can 
+use them later on. We can use the Github Packages to store our artifacts.
 - What is Github Packages:
     -- Github Packages is a package
-    hosting service that allows you to host your packages privately or publicly and use packages
-    as dependencies in your projects.
-    -- Also there are some other solutions beside Github Packagessolutions to store the
-        artifacts:
+    hosting service that allows you to host your packages privately or publicly and 
+    use packages as dependencies in your projects.
+    -- Also there are some other solutions beside Github Packagessolutions to store 
+    the artifacts:
         --- Sonatype Nexus
         --- JFrog Artifactory
         --- Cloud Storage Bucket (AWS S3, Google Cloud Storage, Azure Blob Storage)
-    -- Github Packages is storage solution for artifacts that is integrated with Github.
-    -- Github Packages is managed by RestAPIs with programmatic access for easy integration
+    -- Github Packages is storage solution for artifacts that is integrated with \
+    Github.
+    -- Github Packages is managed by RestAPIs with programmatic access for easy 
+    integration
     into automated systems.
     -- Private repositories are allowed free storage and transfer, but are builled for
     exceeding the threshold.

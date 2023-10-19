@@ -11,21 +11,22 @@ Static Testing:
     unit-testing to ensure its performance in any environment.
 
 Static Testing and Functional Testing:
-    - Static testing tests raw code and functional testing tests the functionality of the
-    code.
-    - Static testing detects issues in isolation and functional testing detects issues in
-    integration.
-    - Static testings is done on the runner in Github Actions pipeline, and functional test
-    is required non-production environment.
+    - Static testing tests raw code and functional testing tests the functionality of 
+    the code.
+    - Static testing detects issues in isolation and functional testing detects issues 
+    in integration.
+    - Static testings is done on the runner in Github Actions pipeline, and functional 
+    test is required non-production environment.
 Where to perform tests?
-    - In a data center we will need to requisition install and maintain dedicated testing
-    environments.
-    - In a cloud, everything is ephemeral, so we can spin testing environments on demand, run
-    our tests and destroy the environement.
-    - With IaC using Infrastructure as code we can match our testing environment top to
-    bottom with our production environment.
-    - Moving testing environment to an "on demand" using infrastructure as Code in the cloud
-    can increase test accuracy, reduce costs, eliminate long waits for testing environment.
+    - In a data center we will need to requisition install and maintain dedicated 
+    testing environments.
+    - In a cloud, everything is ephemeral, so we can spin testing environments on 
+    demand, run our tests and destroy the environement.
+    - With IaC using Infrastructure as code we can match our testing environment top 
+    to bottom with our production environment.
+    - Moving testing environment to an "on demand" using infrastructure as Code in 
+    the cloud can increase test accuracy, reduce costs, eliminate long waits for 
+    testing environment.
 Non-Production Environement steps breakdown:
     - 1. Configure the AWS CLI
     - 2. Create non-prod lambda function

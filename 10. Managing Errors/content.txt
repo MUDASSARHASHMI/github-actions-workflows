@@ -1,9 +1,10 @@
 Catching Errors Sooner: Code Quality Check
     - Static Code Analysis
         -- Any checks on raw code
-        -- Static tests can check for style, and syntax issues, catch potential versions conflicts,
-        and even scan dependencies for known security vulnerabilities.
-        -- Static tests run can run before time-consuming build jobs so they can allow workflows to
-        fail fast and save time.
+        -- Static tests can check for style, and syntax issues, catch potential 
+        versions conflicts, and even scan dependencies for known security 
+        vulnerabilities.
+        -- Static tests run can run before time-consuming build jobs so they can 
+        allow workflows to fail fast and save time.
      - Linting job to execute in wofkflow for static code analysis
          -- In attached "test.yaml" lint job is added to catch errors sooner.

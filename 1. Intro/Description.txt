@@ -1,11 +1,11 @@
 Github Actions:
 - A countinuous integration solution
-    -- Can trigger workflows based on pushes, pull requests, and other events to execute,
-    build, test and deploy tasks.
+    -- Can trigger workflows based on pushes, pull requests, and other events to 
+    execute, build, test and deploy tasks.
 - A managed Service
     -- Hosted on GitHub
-    -- Github manages the underlying resources, so there is no configuring, patching and
-    updating of infrastructure (unless we want to)
+    -- Github manages the underlying resources, so there is no configuring, patching 
+    and updating of infrastructure (unless we want to)
     -- Free for public repositories
     -- Paid for private repositories
 - Supported by Community Libraries:

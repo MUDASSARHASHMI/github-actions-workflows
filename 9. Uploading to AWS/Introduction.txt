@@ -19,8 +19,9 @@ There are two approaches to make it work with AWS:
         export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
         export AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }}
 ...
-    -- Second option is to use community actions where as a single step we provide credentials
-    to community action. Rest will be handled by the community action itself.
+    -- Second option is to use community actions where as a single step we provide 
+    credentials to community action. Rest will be handled by the community action 
+    itself.
 ...
 - name: Confugure AWS CLI
   uses: aws-actions/configure-aws-credentials@v1

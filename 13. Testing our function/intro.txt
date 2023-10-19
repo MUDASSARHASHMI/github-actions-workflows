@@ -1,11 +1,12 @@
 Testing Our Function:
     - There are lots of testing tools and frameworks for functional testing
     - We will invoke our testing functions with test payloads and check the results
-    - We will submit multiple test cases to ensure that our function can handle more than
-    one input
+    - We will submit multiple test cases to ensure that our function can handle more 
+    than one input
     - To submit multiple test cases we will use Matrices
-    - Matrices are a way to submit multiple test cases to a function with a single call
-    - We can stack matrices for example for a Java version and OS version or a Java version
-    or a Docker version. That way we can create wide range of test cases.
+    - Matrices are a way to submit multiple test cases to a function with a single 
+    call
+    - We can stack matrices for example for a Java version and OS version or a Java 
+    version or a Docker version. That way we can create wide range of test cases.
     - This covers a lot of ground by submitting multiple values to single matrices.
     

@@ -1,27 +1,29 @@
 Adding Documentation:
 - CI more than just build
-    - Update Docs:We can also automate documentation in Github Actions. This way docs get updated with
-    every push or change happens to the code base.
-    - Update Tickets: We can manage tickets with succeeded release to automatically close
-    all the tickets associated to that branch.
-    - Automate Sending Emails/Marketing Content (If Opensource: We can automatically trigger
-    emails based on actions, releases or failure to concened parties.
-    - Run Analytics: We can even track overall application bottlenecks to figure what parts
-    took long to resolve that may require attention or actions for future.
-    - Publish message to queue: We can publish messages to a queue to trigger other actions
-    and any number of entities can subscribe to that queue to perform their own actions.
+    - Update Docs:We can also automate documentation in Github Actions. This way docs 
+    get updated with every push or change happens to the code base.
+    - Update Tickets: We can manage tickets with succeeded release to automatically 
+    close all the tickets associated to that branch.
+    - Automate Sending Emails/Marketing Content (If Opensource: We can automatically 
+    trigger emails based on actions), releases or failure to concened parties.
+    - Run Analytics: We can even track overall application bottlenecks to figure what 
+    parts took long to resolve that may require attention or actions for future.
+    - Publish message to queue: We can publish messages to a queue to trigger other 
+    actions and any number of entities can subscribe to that queue to perform their 
+    own actions.
 - Github Pages
     - Github provides free public website hosting like s3 bucket
     - For static sites it supports any static site that can be deployed JS frameworks,
     plain HTML, and tools like Jekyll for free.
-    - To configure free static site we simple create a desgnated branch name that is usually
-    "gh-pages" and point to an index.html file and Github will serve 0that or any asoociated
-    content as a website.
+    - To configure free static site we simple create a desgnated branch name that is 
+    usually "gh-pages" and point to an index.html file and Github will serve 0that or 
+    any asoociated content as a website.
 - What is pages good for?
-    - We will use hosting service for our documentation and we have framekworks like MkDocs
-    or Sphinx that does not require a whole lot code to serve documentation site online.
+    - We will use hosting service for our documentation and we have framekworks like 
+    MkDocs or Sphinx that does not require a whole lot code to serve documentation 
+    site online.
     - We can also use it for our personal website or portfolio.
-    - We can use it for test results ans some test output to a HTML file so we can turn our
-    pages to a dashboard to present any kind of data we like.
-    - We can use Github pages for project roadmaps to let users or all parties to see what
-    features are on the horizen.
+    - We can use it for test results ans some test output to a HTML file so we can 
+    turn our pages to a dashboard to present any kind of data we like.
+    - We can use Github pages for project roadmaps to let users or all parties to see 
+    what features are on the horizen.
