@@ -18,7 +18,8 @@ Getting Running with Runners:
     unauthorize access to our source code.
     -- Github Enterprise do not have access to Github managed runners -- it can perform
     actions on Github intance but setting up runners will save a lot of pain.
-    -- But there are use cases where we can run custom Runners without Github Enterprise.
+    -- But there are use cases where we can run custom Runners without Github 
+    Enterprise.
     Github does support manageability with secrets. We can use secrets to store
     credentials and other sensitive information.
     -- But there are scenarios where we don't want Github to access our production
